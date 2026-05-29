@@ -1,96 +1,49 @@
 # SOC Home Lab
 
-## ℹ️Overview
+## Overview
 
-This home lab is focused on setting up Wireshark Home-Lab and getting hands-on with practical scenarios. If you are a Network Security Engineer, SOC Analyst, or Aspirant Security Analyst, this home lab will help you with Network Analysis, Security Forensics, and Malware Traffic Analysis.
+### About Me
 
-Thank you for reviewing my materials. This section includes a selection of documents that reflect
-my technical foundation, hands-on learning, and interest in maritime and OT cybersecurity.
+I am a cybersecurity professional focused on threat detection, security monitoring, and the protection of critical infrastructure.
 
-Here's a quick guide to what's inside:
-- Certifications – Security+, Network+, ISC2 CC, and PISCES Network Analyst 
-- Cybersecurity Analyst Resume – Focused on SOC, Help Desk, and infrastructure support
-experience
-- Network with Segmentation and Logging Diagram – Visual representation of VLANs and
-logging points
-- PISCES Incident Note – 
-- Risk Assessment – Maritime (Wenatchee, WA) – Localized risk analysis with OT
-relevance
-- Security Experience Highlights – One-page summary of my practical experience using
-STAR format
-- Professional Development Roadmap – My current goals and learning trajectory
+I earned a Bachelor of Applied Science in Information Technology Management with a Cybersecurity specialization from Central Washington University. During my studies, I served as a Security Operations Center (SOC) Analyst for the PISCES Project, where I monitored live production traffic for cities, counties, and public-sector organizations. In this role, I triaged security alerts, investigated Indicators of Compromise (IoCs), analyzed network activity, and documented findings through incident reports and escalation tickets.
 
+Prior to my SOC experience, I supported users through the Wenatchee Valley College Help Desk, troubleshooting network connectivity issues, assisting with patch management activities, supporting Microsoft 365 environments, and documenting standard operating procedures for recurring technical issues. These experiences strengthened my understanding of networking fundamentals, access management, and technical support operations.
 
-This Home-Lab covers:
-- [Requirement](https://github.com/0xrajneesh/Wireshark-Home-Lab?tab=readme-ov-file#requirements)
-- [Lab Diagram](https://github.com/0xrajneesh/Wireshark-Home-Lab?tab=readme-ov-file#%EF%B8%8Flab-diagram)
-- [Setting up Wireshark Home-Lab](https://github.com/0xrajneesh/Wireshark-Home-Lab?tab=readme-ov-file#-setting-up-wireshark-home-lab)
-- [Excercises- Network Analysis](https://github.com/0xrajneesh/Wireshark-Home-Lab?tab=readme-ov-file#excercises--network-analysis)
-- [Exercises- Security Forensics](https://github.com/0xrajneesh/Wireshark-Home-Lab?tab=readme-ov-file#excercises--security-forensics)
-- [Exercises- Malware Traffic Analysis](https://github.com/0xrajneesh/Wireshark-Home-Lab?tab=readme-ov-file#excercises--malware-traffic-analysis)
+To continue developing my technical skills, I built and maintain a dedicated home Security Operations Center (SOC) lab. The lab is designed to simulate real-world monitoring and detection workflows using Splunk, the ELK Stack, Wireshark, VLAN segmentation, and custom detection rules. Through hands-on projects, I practice log analysis, alert triage, incident investigation, network traffic analysis, and threat detection engineering.
 
+My cybersecurity interests include:
 
-## 🧮Requirements
+* Security Operations Center (SOC) Analysis
+* Threat Detection and Incident Response
+* Network Security Monitoring
+* SIEM Engineering and Log Analysis
+* Critical Infrastructure Protection
+* Maritime and Operational Technology (OT) Security
+* Security Automation and Detection Development
 
-1. **Attacker**: Kali Linux
+### Certifications
 
-2. **Defender**: Windows 11 or Ubuntu with Wireshark
+* CompTIA Network+
+* CompTIA Security+
+* ISC2 Certified in Cybersecurity (CC)
+* PISCES Network Analyst Certification
 
-## 🖼️Lab Diagram
+### Portfolio Contents
 
-![Home-Lab (1)](https://github.com/0xrajneesh/Home-Lab/assets/40385860/97c81520-b7f0-468a-a8d1-67d67d6dccd8)
+This repository documents my cybersecurity learning journey and demonstrates practical experience through hands-on projects, investigations, and lab exercises.
 
+Included throughout my portfolio are:
 
-## </> Setting up Wireshark Home-Lab
+* SOC analyst investigations and incident documentation
+* Network traffic analysis using Wireshark
+* Splunk and ELK Stack security monitoring projects
+* Home lab architecture and network segmentation designs
+* Risk assessment and threat modeling exercises
+* Security operations procedures and documentation
+* Detection engineering and alert development projects
+* Professional development and certification preparation
 
-- Download and Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)  
-- Download and import [Kali Linux](https://www.kali.org/get-kali/#kali-virtual-machines) in Virtualbox  
-- Download and import [Windows 11](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/) in Virtualbox  
-- Download and install [Wireshark](https://www.wireshark.org/download.html) on Windows 11  
+### Career Objective
 
-
-## 🧑‍💻Excercises- Network Analysis
--  **ARP Packet Analysis**: Capture [ARP](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/arp-storm.pcap) packets to monitor address resolution and detect network mapping activities.
--  **ICMP Packet Analysis**: Analyze [ICMP](https://wiki.wireshark.org/uploads/df619289f2986680173b8cd3035ca4ac/220614_ip_flags_google.pcapng) packets to troubleshoot network connectivity issues.  
--  **DHCP Packet Analysis**: Investigate [DHCP](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/dhcp.pcap) traffic to identify IP address leases and lease durations.  
--  **SMTP Traffic Analysis**: Monitor [SMTP](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/smtp.pcap) traffic to detect email communication and extract sender/receiver information.  
--  **FTP Traffic Analysis**: Capture [FTP](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/FTPv6-1.cap) packets to analyze file transfers and extract filenames.  
--  **DNS Traffic Analysis**: Analyze [DNS](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/dns-remoteshell.pcap) packets to identify domain lookups and resolve IP addresses.    
-- **HTTP Traffic Analysis**: Capture [HTTP](https://wiki.wireshark.org/uploads/27707187aeb30df68e70c8fb9d614981/http.cap) traffic and extract URLs visited.  
-
-
-## 🧑‍💻Excercises- Security Forensics
-- **SYN Scan**: Detect [SYN scan](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) by identifying packets with SYN flag set and multiple consecutive SYN-ACK responses.  
-
--  **UDP Scan**: Identify [UDP scan](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) by analyzing packets with UDP destination ports and absence of corresponding responses or ICMP port unreachable messages.   
-
-- **TCP Connect Scan**: Recognize [TCP connect scan](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) by observing TCP three-way handshake sequences.  
-
-- **ACK Scan**: Detect [ACK scan](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) by analyzing packets with only ACK flag set and no SYN or FIN flags.
-
-- **FIN Scan**: Identify [FIN scan](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) by observing packets with only FIN flag set and absence of response packets or ICMP unreachable messages.  
-
-- **XMAS Scan**: Detect [XMAS scan](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) by analyzing packets with FIN, PSH, and URG flags set simultaneously and absence of corresponding responses.   
-
-- **NULL Scan**: Recognize [NULL scan](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) by analyzing packets with no TCP flags set and absence of response packets or ICMP unreachable messages.  
-
-- **TCP Window Scan**: Detect [TCP Window scan](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) by analyzing packets with varying TCP window sizes indicating potential reconnaissance.  
-
-- **IDLE Scan**: Identify [Idle scan](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) by analyzing packets from a seemingly unrelated zombie host, observing indirect communication patterns.  
-
-- **Version Scan**: Recognize [Version detection](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip) scan by analyzing packets containing service banners or responses with version information.  
-
-- **DDoS attack**: Detect [DDoS attacks](https://wiki.wireshark.org/uploads/__moin_import__/attachments/SampleCaptures/NMap-Captures.zip ) by analyzing abnormal traffic patterns, such as a sudden surge in incoming packets from multiple sources targeting specific ports or services.  
-
-
-## 🧑‍💻Excercises- Malware Traffic Analysis
-- Examining [Emotet Infection](https://github.com/pan-unit42/wireshark-tutorial-Emotet-traffic/blob/main/Example-1-2021-01-06-Emotet-infection.pcap.zip) Traffic  
-
-- Examining Emotet with [Spambot traffic](https://github.com/pan-unit42/wireshark-tutorial-Emotet-traffic/blob/main/Example-2-2021-01-05-Emotet-with-spambot-traffic-part-1.pcap.zip)  
-- Examining Emotet with [Trickbot](https://github.com/pan-unit42/wireshark-tutorial-Emotet-traffic/blob/main/Example-4-2021-01-05-Emotet-infection-with-Trickbot.pcap.zip) pcap  
-
-- Analyzing Emotet Infection with [Qakbot](https://github.com/pan-unit42/wireshark-tutorial-Emotet-traffic/blob/main/Example-5-2020-08-18-Emotet-infection-with-Qakbot.pcap.zip) pcap
-
-
-
-
+My goal is to continue growing as a cybersecurity analyst while contributing to organizations that protect critical services, public-sector systems, and infrastructure. I am actively pursuing opportunities where I can apply my SOC experience, technical troubleshooting skills, and passion for cybersecurity to help defend against evolving threats.
