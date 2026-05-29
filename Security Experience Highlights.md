@@ -1,9 +1,9 @@
 ## Security Experience Highlights
 
 ### Securing a Small Network & SOP Writing
-* **Help Desk Environment:** Supported a multi-building network of student and staff devices during an internship at **Wenatchee Valley College**.
+* **Help Desk Environment:** Supported a multi-building network of student and staff devices during an internship at **Public Sector Agency**.
 * **Proactive Security Maintenance:** Spearheaded routine endpoint patching, connectivity troubleshooting, and systematic logging of recurring network vulnerabilities.
-* **Standard Operating Procedures (SOP):** Authored a foundational SOP guide for common support tickets (covering browser security resets, network adapter verification, and access permission audits), reducing repeat incidents and onboarding new interns into a standardized triage workflow.
+* **Standard Operating Procedures (SOP):** Authored a foundational SOP guide for common support tickets (covering browser security resets, network adapter verification, and access permission audits), reducing repeat incidents and onboarding junior staff into a standardized triage workflow.
 * **SOC Integration:** Translated this procedural mindset into a Security Operations Center (SOC) environment, analyzing live network telemetry in **Kibana** and contributing to official incident ticket documentation.
 
 ### Threat Modeling a Home Network
