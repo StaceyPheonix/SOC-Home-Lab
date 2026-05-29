@@ -1,9 +1,24 @@
-# Wireshark Home-Lab
+# SOC Home Lab
 
 ## ℹ️Overview
 
 This home lab is focused on setting up Wireshark Home-Lab and getting hands-on with practical scenarios. If you are a Network Security Engineer, SOC Analyst, or Aspirant Security Analyst, this home lab will help you with Network Analysis, Security Forensics, and Malware Traffic Analysis.
-![Blue Sand White Beach Simple Watercolor Etsy Shop Banner (5)](https://github.com/0xrajneesh/Wireshark-Home-Lab/assets/40385860/81430310-06cb-4636-b528-2b533a84010a)
+
+Thank you for reviewing my materials. This section includes a selection of documents that reflect
+my technical foundation, hands-on learning, and interest in maritime and OT cybersecurity.
+
+Here's a quick guide to what's inside:
+- Certifications – Security+, Network+, ISC2 CC, and PISCES Network Analyst 
+- Cybersecurity Analyst Resume – Focused on SOC, Help Desk, and infrastructure support
+experience
+- Network with Segmentation and Logging Diagram – Visual representation of VLANs and
+logging points
+- PISCES Incident Note – 
+- Risk Assessment – Maritime (Wenatchee, WA) – Localized risk analysis with OT
+relevance
+- Security Experience Highlights – One-page summary of my practical experience using
+STAR format
+- Professional Development Roadmap – My current goals and learning trajectory
 
 
 This Home-Lab covers:
