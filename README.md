@@ -28,6 +28,7 @@ My cybersecurity interests include:
 * CompTIA Security+
 * ISC2 Certified in Cybersecurity (CC)
 * PISCES Network Analyst Certification
+* CompTIA CySA+ (in progress)
 
 ### Portfolio Contents
 
