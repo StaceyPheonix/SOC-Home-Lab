@@ -99,15 +99,53 @@ Greenholt-Phish-Analysis/
 
 ---
 
-## Screenshots
+# Investigation Screenshots
 
-The screenshots included in this repository document key stages of the investigation process:
+### Figure 1. MIME Attachment Header
 
-- **MIME Attachment Header** – Examination of the email attachment metadata and filename.
-- **SPF Analysis** – Validation of the sender's SPF record.
-- **DKIM Analysis** – Verification of DKIM configuration.
-- **DMARC Analysis** – Review of the sender domain's DMARC policy.
-- **VirusTotal Results** – Reputation analysis of the attachment hash.
+![MIME Attachment Header](screenshots/MIME-attachment-header.png)
+
+The MIME headers identified an attached file named `SWT_#09674321___PDF__.CAB`. The attachment was encoded using Base64 and delivered as a generic binary (`application/octet-stream`). Although the filename suggests a PDF document, the `.CAB` extension is unusual for an invoice or payment request and warranted further analysis.
+
+---
+
+### Figure 2. SPF Record Analysis
+
+![SPF Analysis](screenshots/spf-analysis.png)
+
+The sender domain publishes the following SPF record:
+
+`v=spf1 include:spf.protection.outlook.com -all`
+
+This SPF policy authorizes Microsoft 365 (`spf.protection.outlook.com`) as an approved email sending service for the domain. While the domain has a valid SPF record configured, SPF alone does not confirm that an email is legitimate. The result should be evaluated alongside the email headers, Reply-To address, DKIM, and DMARC during sender authentication analysis.
+
+---
+
+### Figure 3. DKIM Analysis
+
+![DKIM Analysis](screenshots/dkim-analysis.png)
+
+DKIM analysis was performed to determine whether the sender's domain digitally signs outbound email. DKIM helps verify that message contents have not been altered during transmission and serves as one component of email authentication when combined with SPF and DMARC.
+
+---
+
+### Figure 4. DMARC Policy Analysis
+
+![DMARC Analysis](screenshots/dmarc-analysis.png)
+
+The sender domain publishes the following DMARC policy:
+
+`v=DMARC1; p=quarantine; fo=1`
+
+This policy instructs receiving mail servers to quarantine messages that fail DMARC validation. Reviewing DMARC policies helps analysts evaluate how a domain protects against email spoofing and complements SPF and DKIM validation.
+
+---
+
+### Figure 5. VirusTotal Attachment Analysis
+
+![VirusTotal Results](screenshots/virustotal-results.png)
+
+The attachment's SHA256 hash was investigated using VirusTotal as part of the threat intelligence process. Reputation analysis identified the attachment as a compressed archive despite its PDF-themed filename. Hash reputation lookups provide additional context when determining whether an attachment has previously been associated with malicious activity.
 
 ---
 
@@ -116,14 +154,15 @@ The screenshots included in this repository document key stages of the investiga
 - Phishing Email Analysis
 - Email Header Analysis
 - MIME Header Analysis
-- SPF, DKIM, and DMARC Validation
+- Email Authentication (SPF, DKIM, and DMARC)
 - IOC Identification and Documentation
 - Threat Intelligence Research
+- VirusTotal Analysis
 - Attachment Analysis
 - SHA256 Hash Verification
+- MITRE ATT&CK Mapping
 - Security Documentation
 - SOC Investigation Workflow
-- MITRE ATT&CK Mapping
 
 ---
 
@@ -134,5 +173,3 @@ The screenshots included in this repository document key stages of the investiga
 Bachelor of Applied Science – Information Technology (Cybersecurity)
 
 CompTIA Security+ | Network+ | ISC² Certified in Cybersecurity (CC)
-
-GitHub Portfolio: SOC Home Lab
